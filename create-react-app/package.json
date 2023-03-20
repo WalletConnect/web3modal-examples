@@ -1,0 +1,29 @@
+{
+  "name": "cra-example",
+  "version": "2.2.1",
+  "private": true,
+  "scripts": {
+    "dev": "react-scripts start"
+  },
+  "dependencies": {
+    "@web3modal/ethereum": "2.2.1",
+    "@web3modal/react": "2.2.1",
+    "ethers": "5.7.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1",
+    "wagmi": "0.12.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
