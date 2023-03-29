@@ -1,0 +1,17 @@
+{
+  "name": "html-standalone-example",
+  "private": true,
+  "version": "2.2.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@walletconnect/auth-client": "2.0.4",
+    "@web3modal/standalone": "2.2.2"
+  },
+  "devDependencies": {
+    "vite": "4.2.1"
+  }
+}
