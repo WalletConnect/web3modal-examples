@@ -11,6 +11,7 @@ const chainId = "eip155:1";
 // 3. Create modal client
 export const web3Modal = new Web3Modal({
   projectId,
+  walletConnectVersion: 2,
   standaloneChains: [chainId],
 });
 export let authClient = undefined;
