@@ -45,6 +45,8 @@ connectButton.addEventListener("click", async () => {
         domain: "walletconnect.com",
         chainId,
         nonce: generateNonce(),
+        type: 'eip4361',
+        statement: 'Sign in with wallet.'
       });
       if (uri) {
         await web3Modal.openModal({ uri });
