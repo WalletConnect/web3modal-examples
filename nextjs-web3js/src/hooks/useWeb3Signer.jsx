@@ -10,5 +10,5 @@ export default function useWeb3Signer() {
 
  const web3 = new Web3(web3signer)
 
-  return { signer: web3 }
+  return { provider: web3 }
 }
