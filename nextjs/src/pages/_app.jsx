@@ -4,8 +4,7 @@ import {
   w3mProvider,
 } from "@web3modal/ethereum";
 import { Web3Modal } from "@web3modal/react";
-import { useEffect, useState } from "react";
-import { configureChains, createClient, WagmiConfig } from "wagmi";
+import { configureChains, createClient } from "wagmi";
 import {
   arbitrum,
   avalanche,
@@ -17,6 +16,10 @@ import {
   polygon,
 } from "wagmi/chains";
 import "../styles.css";
+import dynamic from 'next/dynamic';
+
+//Dynamic import to avoid hydration mismatch when autoconnect is set to true.
+const WagmiConfig = dynamic(()=>import('wagmi').then((wagmi)=>wagmi.WagmiConfig), { ssr: false })
 
 // 1. Get projectID at https://cloud.walletconnect.com
 if (!process.env.NEXT_PUBLIC_PROJECT_ID) {
@@ -48,19 +51,11 @@ const ethereumClient = new EthereumClient(wagmiClient, chains);
 
 // 4. Wrap your app with WagmiProvider and add <Web3Modal /> compoennt
 export default function App({ Component, pageProps }) {
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    setReady(true);
-  }, []);
-
   return (
     <>
-      {ready ? (
-        <WagmiConfig client={wagmiClient}>
-          <Component {...pageProps} />
-        </WagmiConfig>
-      ) : null}
+      <WagmiConfig client={wagmiClient}>
+        <Component {...pageProps} />
+      </WagmiConfig>
 
       <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
     </>
