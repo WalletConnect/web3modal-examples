@@ -4,7 +4,6 @@ import {
   w3mProvider,
 } from "@web3modal/ethereum";
 import { Web3Modal } from "@web3modal/react";
-import { useEffect, useState } from "react";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import {
   arbitrum,
@@ -48,19 +47,11 @@ const ethereumClient = new EthereumClient(wagmiClient, chains);
 
 // 4. Wrap your app with WagmiProvider and add <Web3Modal /> compoennt
 export default function App({ Component, pageProps }) {
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    setReady(true);
-  }, []);
-
   return (
     <>
-      {ready ? (
-        <WagmiConfig client={wagmiClient}>
-          <Component {...pageProps} />
-        </WagmiConfig>
-      ) : null}
+      <WagmiConfig client={wagmiClient}>
+        <Component {...pageProps} />
+      </WagmiConfig>
 
       <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
     </>
