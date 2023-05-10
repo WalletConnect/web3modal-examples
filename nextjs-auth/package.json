@@ -1,0 +1,14 @@
+{
+  "name": "nextjs-auth",
+  "version": "2.4.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "@web3modal/auth-react": "2.4.0",
+    "next": "13.4.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
