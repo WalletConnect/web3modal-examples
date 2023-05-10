@@ -1,17 +1,16 @@
 {
-  "name": "html-standalone-example",
+  "name": "html-auth",
   "private": true,
-  "version": "2.2.1",
+  "version": "2.4.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@walletconnect/auth-client": "2.0.4",
-    "@web3modal/standalone": "2.2.2"
+    "@web3modal/auth-html": "2.4.1"
   },
   "devDependencies": {
-    "vite": "4.2.1"
+    "vite": "4.3.5"
   }
 }

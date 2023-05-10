@@ -1,4 +1,4 @@
-import { configureChains, createClient } from "@wagmi/core";
+import { configureChains, createConfig } from "@wagmi/core";
 import { arbitrum, avalanche, mainnet, polygon } from "@wagmi/core/chains";
 import {
   EthereumClient,
@@ -12,15 +12,15 @@ const projectId = import.meta.env.VITE_PROJECT_ID;
 const chains = [mainnet, polygon, avalanche, arbitrum];
 
 // 2. Configure wagmi client
-const { provider } = configureChains(chains, [w3mProvider({ projectId })]);
-const wagmiClient = createClient({
+const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
+const wagmiConfig = createConfig({
   autoConnect: true,
   connectors: w3mConnectors({ chains, version: 1, projectId }),
-  provider,
+  publicClient,
 });
 
 // 3. Create ethereum and modal clients
-const ethereumClient = new EthereumClient(wagmiClient, chains);
+const ethereumClient = new EthereumClient(wagmiConfig, chains);
 export const web3Modal = new Web3Modal(
   {
     projectId,
