@@ -8,12 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@wagmi/core": "0.10.2",
-    "@web3modal/ethereum": "2.2.1",
-    "@web3modal/html": "2.2.1",
-    "ethers": "5.7.2"
+    "@wagmi/core": "1.0.1",
+    "@web3modal/ethereum": "2.4.0",
+    "@web3modal/html": "2.4.0",
+    "viem": "0.3.19"
   },
   "devDependencies": {
-    "vite": "4.2.0"
+    "vite": "4.3.5"
   }
 }
