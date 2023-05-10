@@ -1,7 +1,3 @@
-body {
-  background: linear-gradient(to right, #414345, #232526);
-}
-
 #__next {
   display: flex;
   flex-direction: column;
