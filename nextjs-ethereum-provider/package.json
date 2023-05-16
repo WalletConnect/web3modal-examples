@@ -6,9 +6,9 @@
     "dev": "next dev"
   },
   "dependencies": {
-    "@walletconnect/ethereum-provider": "2.7.3",
+    "@walletconnect/ethereum-provider": "2.7.4",
     "@web3modal/standalone": "2.4.1",
-    "next": "13.4.1",
+    "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }

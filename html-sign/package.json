@@ -4,14 +4,13 @@
   "version": "2.4.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "dependencies": {
-    "@walletconnect/sign-client": "2.7.3",
+    "@walletconnect/sign-client": "2.7.4",
     "@web3modal/standalone": "2.4.1"
   },
   "devDependencies": {
-    "vite": "4.3.5"
+    "vite": "4.3.6"
   }
 }
