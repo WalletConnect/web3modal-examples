@@ -5,13 +5,9 @@ const connectButton = document.getElementById("connect-button");
 
 // 1. Define constants
 const projectId = import.meta.env.VITE_PROJECT_ID;
-const namespaces = {
-  eip155: {
-    methods: ["eth_sign"],
-    chains: ["eip155:1"],
-    events: ["accountsChanged"],
-  },
-};
+if (!projectId) {
+  throw new Error("You need to provide VITE_PROJECT_ID env variable");
+}
 
 // 2. Create modal client
 export const web3Modal = new Web3ModalSign({

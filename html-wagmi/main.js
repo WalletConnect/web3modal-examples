@@ -9,6 +9,10 @@ import { Web3Modal } from "@web3modal/html";
 
 // 1. Define constants
 const projectId = import.meta.env.VITE_PROJECT_ID;
+if (!projectId) {
+  throw new Error("You need to provide VITE_PROJECT_ID env variable");
+}
+
 const chains = [mainnet, polygon, avalanche, arbitrum];
 
 // 2. Configure wagmi client
