@@ -10,13 +10,13 @@ if (!projectId) {
 export default function HomePage() {
   // 2. Use sign in hook
   const [disabled, setDisabled] = useState(false);
-  const signIn = useSignIn({ statement: "Connect to Web3Modal Lab" });
+  const { signIn } = useSignIn({ statement: "Connect to Web3Modal Lab" });
 
   // 3. Sign in function
   async function onSignIn() {
     try {
       setDisabled(true);
-      const data = await signIn({ statement: "Connect to Web3Modal Lab" });
+      const data = await signIn();
       console.info(data);
     } catch (err) {
       console.error(err);
