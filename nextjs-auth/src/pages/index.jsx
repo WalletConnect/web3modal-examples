@@ -27,7 +27,9 @@ export default function HomePage() {
 
   return (
     <>
-      <button onClick={onSignIn}>Sign In</button>
+      <button onClick={onSignIn} disabled={disabled}>
+        Sign In
+      </button>
 
       {/* Set up Web3ModalAuth component */}
       <Web3ModalAuth
