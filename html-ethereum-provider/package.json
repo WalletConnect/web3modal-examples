@@ -1,16 +1,16 @@
 {
   "name": "html-ethereum-provider",
   "private": true,
-  "version": "2.4.1",
+  "version": "2.4.2",
   "type": "module",
   "scripts": {
     "dev": "vite"
   },
   "dependencies": {
-    "@web3modal/standalone": "2.4.1",
-    "@walletconnect/ethereum-provider": "2.7.4"
+    "@web3modal/standalone": "2.4.2",
+    "@walletconnect/ethereum-provider": "2.7.7"
   },
   "devDependencies": {
-    "vite": "4.3.6"
+    "vite": "4.3.9"
   }
 }
