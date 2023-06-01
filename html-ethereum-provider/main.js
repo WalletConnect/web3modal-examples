@@ -6,6 +6,9 @@ const connectButton = document.getElementById("connect-button");
 
 // 1. Define constants
 const projectId = import.meta.env.VITE_PROJECT_ID;
+if (!projectId) {
+  throw new Error("You need to provide VITE_PROJECT_ID env variable");
+}
 
 // 4. Connect to provider, also handles opening and closing modal under the hood
 async function onConnect() {

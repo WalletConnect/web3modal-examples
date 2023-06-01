@@ -1,54 +1,47 @@
-import { SignClient } from "@walletconnect/sign-client";
-import { Web3Modal } from "@web3modal/standalone";
+import { Web3ModalSign } from "@web3modal/sign-html";
 
 // 0. Define ui elements
 const connectButton = document.getElementById("connect-button");
 
 // 1. Define constants
 const projectId = import.meta.env.VITE_PROJECT_ID;
-const namespaces = {
-  eip155: {
-    methods: ["eth_sign"],
-    chains: ["eip155:1"],
-    events: ["accountsChanged"],
-  },
-};
+if (!projectId) {
+  throw new Error("You need to provide VITE_PROJECT_ID env variable");
+}
 
-// 3. Create modal client
-export const web3Modal = new Web3Modal({
+// 2. Create modal client
+export const web3Modal = new Web3ModalSign({
   projectId,
-  standaloneChains: namespaces.eip155.chains,
+  metadata: {
+    name: "Web3Modal",
+    description: "Web3Modal",
+    url: "web3modal.com",
+    icons: [
+      "https://walletconnect.com/_next/static/media/logo_mark.84dd8525.svg",
+    ],
+  },
 });
-export let signClient = undefined;
 
-// 4. Initialise clients
-async function initialize() {
+// 4. Connect
+async function onConnect() {
   try {
     connectButton.disabled = true;
-    signClient = await SignClient.init({ projectId });
-    connectButton.disabled = false;
-    connectButton.innerText = "Connect Wallet";
+    const session = await web3Modal.connect({
+      requiredNamespaces: {
+        eip155: {
+          methods: ["eth_sendTransaction", "personal_sign"],
+          chains: ["eip155:1"],
+          events: ["chainChanged", "accountsChanged"],
+        },
+      },
+    });
+    console.info(session);
   } catch (err) {
     console.error(err);
+  } finally {
+    connectButton.disabled = false;
   }
 }
 
-initialize();
-
 // 5. Create connection handler
-connectButton.addEventListener("click", async () => {
-  try {
-    if (signClient) {
-      const { uri, approval } = await signClient.connect({
-        requiredNamespaces: namespaces,
-      });
-      if (uri) {
-        await web3Modal.openModal({ uri });
-        await approval();
-        web3Modal.closeModal();
-      }
-    }
-  } catch (err) {
-    console.error(err);
-  }
-});
+connectButton.addEventListener("click", onConnect);
