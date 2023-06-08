@@ -1,17 +1,17 @@
 {
   "name": "nextjs-wagmi",
-  "version": "2.4.2",
+  "version": "2.4.5",
   "private": true,
   "scripts": {
     "dev": "next dev"
   },
   "dependencies": {
-    "@web3modal/ethereum": "2.4.2",
-    "@web3modal/react": "2.4.2",
-    "viem": "0.3.41",
+    "@web3modal/ethereum": "2.4.5",
+    "@web3modal/react": "2.4.5",
+    "viem": "1.0.0",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "wagmi": "1.0.9"
+    "wagmi": "1.1.1"
   }
 }

@@ -1,13 +1,13 @@
 {
   "name": "nextjs-ethereum-provider",
-  "version": "2.4.3",
+  "version": "2.4.5",
   "private": true,
   "scripts": {
     "dev": "next dev"
   },
   "dependencies": {
-    "@walletconnect/ethereum-provider": "2.7.8",
-    "@web3modal/standalone": "2.4.3",
+    "@walletconnect/ethereum-provider": "2.8.0",
+    "@walletconnect/modal": "2.4.5",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
