@@ -1,4 +1,4 @@
-import { Web3ModalSign } from "https://unpkg.com/@web3modal/sign-html@2.4.6-d52fccc0";
+import { Web3ModalSign } from "https://unpkg.com/@web3modal/sign-html@2.4.6";
 
 // 1. Define ui elements
 const connectButton = document.getElementById("connect-button");

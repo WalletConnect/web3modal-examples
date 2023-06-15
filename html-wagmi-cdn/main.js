@@ -4,9 +4,10 @@ import {
   w3mProvider,
   WagmiCore,
   WagmiCoreChains,
-} from "https://unpkg.com/@web3modal/ethereum@2.4.6-66c5c638";
+  WagmiCoreConnectors,
+} from "https://unpkg.com/@web3modal/ethereum@2.4.6";
 
-import { Web3Modal } from "https://unpkg.com/@web3modal/html@2.4.6-66c5c638";
+import { Web3Modal } from "https://unpkg.com/@web3modal/html@2.4.6";
 
 // 0. Import wagmi dependencies
 const { mainnet, polygon, avalanche, arbitrum } = WagmiCoreChains;
@@ -20,7 +21,15 @@ const projectId = "2aca272d18deb10ff748260da5f78bfd";
 const { publicClient } = configureChains(chains, [w3mProvider({ projectId })]);
 const wagmiConfig = createConfig({
   autoConnect: true,
-  connectors: w3mConnectors({ chains, version: 2, projectId }),
+  connectors: [
+    ...w3mConnectors({ chains, version: 2, projectId }),
+    new WagmiCoreConnectors.CoinbaseWalletConnector({
+      chains,
+      options: {
+        appName: "html wagmi example",
+      },
+    }),
+  ],
   publicClient,
 });
 

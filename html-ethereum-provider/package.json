@@ -1,13 +1,13 @@
 {
   "name": "html-ethereum-provider",
   "private": true,
-  "version": "2.4.5",
+  "version": "2.4.6",
   "type": "module",
   "scripts": {
     "dev": "vite"
   },
   "dependencies": {
-    "@walletconnect/modal": "2.4.5",
+    "@walletconnect/modal": "2.4.6",
     "@walletconnect/ethereum-provider": "2.8.0"
   },
   "devDependencies": {

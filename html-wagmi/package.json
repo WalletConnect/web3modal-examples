@@ -1,16 +1,16 @@
 {
   "name": "html-wagmi",
   "private": true,
-  "version": "2.4.5",
+  "version": "2.4.6",
   "type": "module",
   "scripts": {
     "dev": "vite"
   },
   "dependencies": {
-    "@wagmi/core": "1.1.1",
-    "@web3modal/ethereum": "2.4.5",
-    "@web3modal/html": "2.4.5",
-    "viem": "1.0.0"
+    "@wagmi/core": "1.2.0",
+    "@web3modal/ethereum": "2.4.6",
+    "@web3modal/html": "2.4.6",
+    "viem": "1.0.7"
   },
   "devDependencies": {
     "vite": "4.3.9"
