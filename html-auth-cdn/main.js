@@ -1,4 +1,4 @@
-import { Web3ModalAuth } from "https://unpkg.com/@web3modal/auth-html@2.4.6";
+import { Web3ModalAuth } from "https://unpkg.com/@web3modal/auth-html@2.4.7";
 
 // 1. Define ui elements
 const connectButton = document.getElementById("connect-button");
