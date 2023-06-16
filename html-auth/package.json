@@ -1,13 +1,13 @@
 {
   "name": "html-auth",
   "private": true,
-  "version": "2.4.6",
+  "version": "2.4.7",
   "type": "module",
   "scripts": {
     "dev": "vite"
   },
   "dependencies": {
-    "@web3modal/auth-html": "2.4.6"
+    "@web3modal/auth-html": "2.4.7"
   },
   "devDependencies": {
     "vite": "4.3.9"
