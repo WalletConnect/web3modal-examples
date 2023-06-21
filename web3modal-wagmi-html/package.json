@@ -1,5 +1,5 @@
 {
-  "name": "html-sign",
+  "name": "web3modal-wagmi-html",
   "private": true,
   "version": "2.4.7",
   "type": "module",
@@ -7,7 +7,10 @@
     "dev": "vite"
   },
   "dependencies": {
-    "@web3modal/sign-html": "2.4.7"
+    "@wagmi/core": "1.2.0",
+    "@web3modal/ethereum": "2.4.7",
+    "@web3modal/html": "2.4.7",
+    "viem": "1.0.7"
   },
   "devDependencies": {
     "vite": "4.3.9"
