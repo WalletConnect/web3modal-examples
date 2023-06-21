@@ -1,4 +1,7 @@
-import { Web3ModalAuth, useSignIn } from "@web3modal/auth-react";
+import {
+  WalletConnectModalAuth,
+  useSignIn,
+} from "@walletconnect/modal-auth-react";
 import { useState } from "react";
 
 // 1. Get projectID at https://cloud.walletconnect.com
@@ -10,7 +13,7 @@ if (!projectId) {
 export default function HomePage() {
   // 2. Use sign in hook
   const [disabled, setDisabled] = useState(false);
-  const { signIn } = useSignIn({ statement: "Connect to Web3Modal Lab" });
+  const { signIn } = useSignIn({ statement: "Sign In to My Dapp" });
 
   // 3. Sign in function
   async function onSignIn() {
@@ -31,16 +34,14 @@ export default function HomePage() {
         Sign In
       </button>
 
-      {/* Set up Web3ModalAuth component */}
-      <Web3ModalAuth
+      {/* Set up WalletConnectModalAuth component */}
+      <WalletConnectModalAuth
         projectId={projectId}
         metadata={{
-          name: "Web3Modal",
-          description: "Web3Modal",
-          url: "web3modal.com",
-          icons: [
-            "https://walletconnect.com/_next/static/media/logo_mark.84dd8525.svg",
-          ],
+          name: "My Dapp",
+          description: "My Dapp description",
+          url: "https://my-dapp.com",
+          icons: ["https://my-dapp.com/logo.png"],
         }}
       />
     </>

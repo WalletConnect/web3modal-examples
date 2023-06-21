@@ -18,6 +18,12 @@ export default function HomePage() {
       chains: [1],
       methods: ["eth_sendTransaction", "personal_sign"],
       events: ["chainChanged", "accountsChanged"],
+      metadata: {
+        name: "My Dapp",
+        description: "My Dapp description",
+        url: "https://my-dapp.com",
+        icons: ["https://my-dapp.com/logo.png"],
+      },
     });
     setProviderClient(client);
   }

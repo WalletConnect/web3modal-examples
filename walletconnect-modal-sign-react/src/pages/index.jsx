@@ -1,5 +1,8 @@
-import { Web3ModalSign, useConnect } from "@web3modal/sign-react";
-import { useEffect, useState } from "react";
+import {
+  WalletConnectModalSign,
+  useConnect,
+} from "@walletconnect/modal-sign-react";
+import { useState } from "react";
 
 // 1. Get projectID at https://cloud.walletconnect.com
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
@@ -37,16 +40,14 @@ export default function HomePage() {
         Connect Wallet
       </button>
 
-      {/* Set up Web3ModalAuth component */}
-      <Web3ModalSign
+      {/* Set up WalletConnectModalSign component */}
+      <WalletConnectModalSign
         projectId={projectId}
         metadata={{
-          name: "Web3Modal",
-          description: "Web3Modal",
-          url: "web3modal.com",
-          icons: [
-            "https://walletconnect.com/_next/static/media/logo_mark.84dd8525.svg",
-          ],
+          name: "My Dapp",
+          description: "My Dapp description",
+          url: "https://my-dapp.com",
+          icons: ["https://my-dapp.com/logo.png"],
         }}
       />
     </>

@@ -1,4 +1,4 @@
-import { Web3ModalAuth } from "@web3modal/auth-html";
+import { WalletConnectModalAuth } from "@walletconnect/modal-auth-html";
 
 // 0. Define ui elements
 const connectButton = document.getElementById("connect-button");
@@ -10,15 +10,13 @@ if (!projectId) {
 }
 
 // 3. Create modal client
-export const web3Modal = new Web3ModalAuth({
+export const modal = new WalletConnectModalAuth({
   projectId,
   metadata: {
-    name: "Web3Modal",
-    description: "Web3Modal",
-    url: "web3modal.com",
-    icons: [
-      "https://walletconnect.com/_next/static/media/logo_mark.84dd8525.svg",
-    ],
+    name: "My Dapp",
+    description: "My Dapp description",
+    url: "https://my-dapp.com",
+    icons: ["https://my-dapp.com/logo.png"],
   },
 });
 
@@ -26,7 +24,7 @@ export const web3Modal = new Web3ModalAuth({
 async function onSignIn() {
   try {
     connectButton.disabled = true;
-    const data = await web3Modal.signIn({ statement: "Connect to Web3Modal" });
+    const data = await modal.signIn({ statement: "Sign In to My Dapp" });
     console.info(data);
   } catch (err) {
     console.error(err);

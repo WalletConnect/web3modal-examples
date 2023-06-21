@@ -1,4 +1,4 @@
-import { Web3ModalSign } from "https://unpkg.com/@web3modal/sign-html@2.4.7";
+import { Web3ModalSign } from "https://unpkg.com/@walletconnect/modal-sign-html@2.5.0-0d56da4";
 
 // 1. Define ui elements
 const connectButton = document.getElementById("connect-button");
@@ -7,12 +7,10 @@ const connectButton = document.getElementById("connect-button");
 const web3Modal = new Web3ModalSign({
   projectId: "YOUR_PROJECT_ID",
   metadata: {
-    name: "Web3Modal",
-    description: "Web3Modal",
-    url: "web3modal.com",
-    icons: [
-      "https://walletconnect.com/_next/static/media/logo_mark.84dd8525.svg",
-    ],
+    name: "My Dapp",
+    description: "My Dapp description",
+    url: "https://my-dapp.com",
+    icons: ["https://my-dapp.com/logo.png"],
   },
 });
 
