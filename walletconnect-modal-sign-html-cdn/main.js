@@ -1,10 +1,10 @@
-import { Web3ModalSign } from "https://unpkg.com/@walletconnect/modal-sign-html@2.5.0-0d56da4";
+import { WalletConnectModalSign } from "https://unpkg.com/@walletconnect/modal-sign-html@2.5.0-f0d3ee1";
 
 // 1. Define ui elements
 const connectButton = document.getElementById("connect-button");
 
 // 2. Create modal client, add your project id
-const web3Modal = new Web3ModalSign({
+const web3Modal = new WalletConnectModalSign({
   projectId: "YOUR_PROJECT_ID",
   metadata: {
     name: "My Dapp",

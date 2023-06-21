@@ -1,12 +1,12 @@
 {
   "name": "walletconnect-modal-sign-react",
-  "version": "2.5.0-0d56da4",
+  "version": "2.5.0-f0d3ee1",
   "private": true,
   "scripts": {
     "dev": "next dev"
   },
   "dependencies": {
-    "@walletconnect/modal-sign-react": "2.5.0-0d56da4",
+    "@walletconnect/modal-sign-react": "2.5.0-f0d3ee1",
     "next": "13.4.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
