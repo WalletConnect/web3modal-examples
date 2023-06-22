@@ -1,0 +1,15 @@
+{
+  "name": "walletconnect-modal-sign-html",
+  "private": true,
+  "version": "2.5.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@walletconnect/modal-sign-html": "2.5.0"
+  },
+  "devDependencies": {
+    "vite": "4.3.9"
+  }
+}
