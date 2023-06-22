@@ -1,13 +1,13 @@
 {
   "name": "walletconnect-modal-auth-react",
   "private": true,
-  "version": "2.5.0-f0d3ee1",
+  "version": "2.5.0",
   "type": "module",
   "scripts": {
     "dev": "vite"
   },
   "dependencies": {
-    "@walletconnect/modal": "2.5.0-f0d3ee1",
+    "@walletconnect/modal": "2.5.0",
     "@walletconnect/ethereum-provider": "2.8.1"
   },
   "devDependencies": {
