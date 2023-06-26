@@ -1,13 +1,13 @@
 {
   "name": "web3modal-wagmi-react",
-  "version": "2.4.7",
+  "version": "2.5.0",
   "private": true,
   "scripts": {
     "dev": "next dev"
   },
   "dependencies": {
-    "@web3modal/ethereum": "2.4.7",
-    "@web3modal/react": "2.4.7",
+    "@web3modal/ethereum": "2.5.0",
+    "@web3modal/react": "2.5.0",
     "viem": "1.0.7",
     "next": "13.4.6",
     "react": "18.2.0",
