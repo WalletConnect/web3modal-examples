@@ -1,13 +1,13 @@
 {
   "name": "walletconnect-modal-auth-html",
   "private": true,
-  "version": "2.5.3",
+  "version": "2.5.4",
   "type": "module",
   "scripts": {
     "dev": "vite"
   },
   "dependencies": {
-    "@walletconnect/modal-auth-html": "2.5.3"
+    "@walletconnect/modal-auth-html": "2.5.4"
   },
   "devDependencies": {
     "vite": "4.3.9"
