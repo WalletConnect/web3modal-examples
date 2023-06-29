@@ -1,4 +1,4 @@
-import { WalletConnectModalAuth } from "https://unpkg.com/@walletconnect/modal-auth-html@2.5.7";
+import { WalletConnectModalAuth } from "https://unpkg.com/@walletconnect/modal-auth-html@2.5.8";
 
 // 1. Define ui elements
 const connectButton = document.getElementById("connect-button");
