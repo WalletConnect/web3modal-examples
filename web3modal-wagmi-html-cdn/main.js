@@ -5,9 +5,9 @@ import {
   WagmiCore,
   WagmiCoreChains,
   WagmiCoreConnectors,
-} from "https://unpkg.com/@web3modal/ethereum@2.6.2";
+} from "https://unpkg.com/@web3modal/ethereum@2.7.1";
 
-import { Web3Modal } from "https://unpkg.com/@web3modal/html@2.6.2";
+import { Web3Modal } from "https://unpkg.com/@web3modal/html@2.7.1";
 
 // 0. Import wagmi dependencies
 const { mainnet, polygon, avalanche, arbitrum } = WagmiCoreChains;
