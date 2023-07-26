@@ -1,12 +1,12 @@
 {
   "name": "nextjs-auth",
-  "version": "2.5.8",
+  "version": "2.6.1",
   "private": true,
   "scripts": {
     "dev": "next dev"
   },
   "dependencies": {
-    "@walletconnect/modal-auth-react": "2.5.8",
+    "@walletconnect/modal-auth-react": "2.6.1",
     "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"

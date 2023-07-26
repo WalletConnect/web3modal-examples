@@ -1,13 +1,13 @@
 {
   "name": "walletconnect-modal-ethereum-provider-react",
-  "version": "2.5.8",
+  "version": "2.6.1",
   "private": true,
   "scripts": {
     "dev": "next dev"
   },
   "dependencies": {
     "@walletconnect/ethereum-provider": "2.8.5",
-    "@walletconnect/modal": "2.5.8",
+    "@walletconnect/modal": "2.6.1",
     "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"
