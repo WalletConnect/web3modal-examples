@@ -1,17 +1,17 @@
-import { useWeb3Modal } from "@web3modal/react";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { useState } from "react";
 import { useAccount, useDisconnect } from "wagmi";
 
 export default function CustomButton() {
   const [loading, setLoading] = useState(false);
-  const { open } = useWeb3Modal();
+  const modal = useWeb3Modal();
   const { isConnected } = useAccount();
   const { disconnect } = useDisconnect();
   const label = isConnected ? "Disconnect" : "Connect Custom";
 
   async function onOpen() {
     setLoading(true);
-    await open();
+    await modal.open();
     setLoading(false);
   }
 
